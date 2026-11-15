@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+  <title id="title">Benson's GitHub</title>
+  <desc id="desc">A minimal blue banner for Benson's profile</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0b1226"/><stop offset="1" stop-color="#153459"/></linearGradient>
+    <linearGradient id="accent" x2="1" y2="0"><stop stop-color="#59d1cf"/><stop offset="1" stop-color="#7da7ff"/></linearGradient>
+  </defs>
+  <rect width="1200" height="300" rx="18" fill="url(#bg)"/>
+  <circle cx="1030" cy="25" r="155" fill="#4d89de" opacity=".1"/>
+  <circle cx="1120" cy="215" r="125" fill="#64e4cf" opacity=".07"/>
+  <path d="M62 65h85" stroke="url(#accent)" stroke-width="5" stroke-linecap="round"/>
+  <text x="62" y="155" fill="#f4f8ff" font-family="Arial, sans-serif" font-size="68" font-weight="700">Hi, I'm Benson.</text>
+  <text x="65" y="210" fill="#a9c4df" font-family="Arial, sans-serif" font-size="25" letter-spacing="3">LEARN  ·  BUILD  ·  SHARE</text>
+  <text x="1015" y="165" fill="#8dd9e1" opacity=".75" font-family="monospace" font-size="68">&lt;/&gt;</text>
+</svg>
