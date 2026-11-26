@@ -1,48 +1,76 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="270" viewBox="0 0 1200 270" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 310" width="1200" height="310" role="img" aria-labelledby="title description">
   <title id="title">Benson</title>
-  <desc id="desc">Backend engineering and agent runtimes. A diagram shows an event flowing through an API to state and tools.</desc>
+  <desc id="description">Java backend and Python agent engineering. Animated signals connect a request, a router, state, and tools.</desc>
   <defs>
-    <linearGradient id="background" x1="0" y1="0" x2="1200" y2="270" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0b1528"/>
-      <stop offset="1" stop-color="#102a39"/>
+    <linearGradient id="field" x1="0%" x2="100%" y1="90%" y2="0%">
+      <stop stop-color="#0A1021"/>
+      <stop offset=".6" stop-color="#151836"/>
+      <stop offset="1" stop-color="#101F38"/>
     </linearGradient>
-    <linearGradient id="trace" x1="740" y1="0" x2="1083" y2="0" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#71aefa"/>
-      <stop offset="1" stop-color="#69e4c7"/>
+    <linearGradient id="signal" x1="0%" x2="100%">
+      <stop stop-color="#54D9C5"/>
+      <stop offset=".65" stop-color="#8CABFF"/>
+      <stop offset="1" stop-color="#BF9EFF"/>
     </linearGradient>
-    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <circle cx="1" cy="1" r="1.15" fill="#8cabb8" opacity=".18"/>
+    <radialGradient id="bloom">
+      <stop stop-color="#7159BB" stop-opacity=".33"/>
+      <stop offset="1" stop-color="#7159BB" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#8FA4D1" opacity=".21"/>
     </pattern>
-    <linearGradient id="mask-fade" x1="505" y1="0" x2="880" y2="0" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#000"/>
-      <stop offset="1" stop-color="#fff"/>
-    </linearGradient>
-    <mask id="fade" maskUnits="userSpaceOnUse" x="480" y="0" width="720" height="270">
-      <rect x="480" width="720" height="270" fill="url(#mask-fade)"/>
-    </mask>
-    <clipPath id="frame"><rect width="1200" height="270" rx="20"/></clipPath>
+    <clipPath id="edge"><rect width="1200" height="310" rx="22"/></clipPath>
   </defs>
-  <g clip-path="url(#frame)">
-    <rect width="1200" height="270" fill="url(#background)"/>
-    <rect x="480" width="720" height="270" fill="url(#grid)" mask="url(#fade)"/>
-    <path d="M64 61h43" stroke="#6de1c5" stroke-width="4" stroke-linecap="round"/>
-    <text x="62" y="143" fill="#f2f8fc" font-family="Segoe UI, Arial, sans-serif" font-size="78" font-weight="700" letter-spacing="-3">Benson</text>
-    <text x="66" y="194" fill="#b5c8d7" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="500">Backend engineering · Agent runtimes</text>
-    <g fill="none" stroke="url(#trace)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M727 135h50m127 0h25a20 20 0 0 0 20-20v-13a19 19 0 0 1 19-19h25"/>
-      <path d="M929 135a20 20 0 0 1 20 20v13a19 19 0 0 0 19 19h25"/>
+  <style>
+    .pulse { stroke-dasharray: 18 260; animation: transmit 5.6s linear infinite; }
+    .output { animation-delay: -2.8s; }
+    .status { animation: breathe 3.8s ease-in-out infinite; }
+    .beacon { animation: breathe 5s ease-in-out infinite; }
+    @keyframes transmit { to { stroke-dashoffset: -278; } }
+    @keyframes breathe { 50% { opacity: .38; } }
+    @media (prefers-reduced-motion: reduce) {
+      .pulse, .status, .beacon { animation: none; }
+    }
+  </style>
+  <g clip-path="url(#edge)">
+    <rect width="1200" height="310" fill="url(#field)"/>
+    <ellipse cx="935" cy="158" rx="390" ry="215" fill="url(#bloom)"/>
+    <rect x="586" y="2" width="614" height="308" fill="url(#dots)"/>
+    <circle cx="871" cy="155" r="120" fill="none" stroke="#2C395D" stroke-dasharray="2 9"/>
+    <circle cx="871" cy="155" r="101" fill="none" stroke="#262D50"/>
+    <path d="M114 300h390m-390-7h256M1024 22h118" fill="none" stroke="#28344E"/>
+    <g fill="#788BBB">
+      <circle class="beacon" cx="1161" cy="59" r="3"/>
+      <circle class="beacon" cx="614" cy="48" r="2.6"/>
+      <circle cx="1108" cy="260" r="2.6"/>
+      <circle cx="622" cy="258" r="2"/>
     </g>
-    <circle cx="929" cy="135" r="4" fill="#80d4db"/>
-    <g font-family="Consolas, Menlo, monospace" font-size="16" font-weight="600" text-anchor="middle">
-      <rect x="619" y="114" width="108" height="42" rx="9" fill="#152a40" stroke="#3c668a"/>
-      <text x="673" y="141" fill="#b7d9fc">EVENT</text>
-      <rect x="777" y="104" width="127" height="62" rx="12" fill="#173c4c" stroke="#62a9bb"/>
-      <text x="840.5" y="141" fill="#e5f8fb">API</text>
-      <rect x="993" y="62" width="120" height="42" rx="9" fill="#123641" stroke="#4e998f"/>
-      <text x="1053" y="89" fill="#a0eed7">STATE</text>
-      <rect x="993" y="166" width="120" height="42" rx="9" fill="#123641" stroke="#4e998f"/>
-      <text x="1053" y="193" fill="#a0eed7">TOOLS</text>
+    <path d="M69 65h72" fill="none" stroke="url(#signal)" stroke-width="4" stroke-linecap="round"/>
+    <text x="63" y="157" fill="#F4F6FC" font-family="Segoe UI, Arial, sans-serif" font-weight="750" font-size="96" letter-spacing="-4">Benson</text>
+    <text x="69" y="202" fill="#B8C8E7" font-family="Segoe UI, Arial, sans-serif" font-weight="500" font-size="30">Java backend · Python agents</text>
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <g stroke="#435580" stroke-width="2">
+        <path id="incoming" d="M746 154h67"/>
+        <path id="upper" d="M930 154h35q18 0 18-18v-25q0-18 18-18h22"/>
+        <path id="lower" d="M930 154h35q18 0 18 18v25q0 18 18 18h22"/>
+      </g>
+      <g stroke="url(#signal)" stroke-width="3.2">
+        <path class="pulse" d="M746 154h67"/>
+        <path class="pulse output" d="M930 154h35q18 0 18-18v-25q0-18 18-18h22"/>
+        <path class="pulse" d="M930 154h35q18 0 18 18v25q0 18 18 18h22"/>
+      </g>
+    </g>
+    <g text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="17" font-weight="700" letter-spacing="1">
+      <rect x="632" y="132" width="114" height="44" rx="10" fill="#101B31" stroke="#40618B"/>
+      <text x="689" y="160" fill="#AFCBF5">REQUEST</text>
+      <rect x="813" y="116" width="117" height="76" rx="14" fill="#22284A" stroke="#9E8BE2"/>
+      <circle class="status" cx="872" cy="136" r="4.4" fill="#66E0BF"/>
+      <text x="872" y="170" fill="#E3DAFF">ROUTER</text>
+      <rect x="1023" y="71" width="116" height="44" rx="10" fill="#17233E" stroke="#4A7B92"/>
+      <text x="1081" y="99" fill="#98EDDB">STATE</text>
+      <rect x="1023" y="193" width="116" height="44" rx="10" fill="#1E2242" stroke="#635687"/>
+      <text x="1081" y="221" fill="#D1BEFF">TOOLS</text>
     </g>
   </g>
-  <rect x=".5" y=".5" width="1199" height="269" rx="19.5" fill="none" stroke="#23414e"/>
+  <rect x=".5" y=".5" width="1199" height="309" rx="21.5" fill="none" stroke="#34405D"/>
 </svg>

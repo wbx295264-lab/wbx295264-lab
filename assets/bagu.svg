@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 166" width="560" height="166" role="img" aria-labelledby="title details">
+  <title id="title">bagu</title>
+  <desc id="details">STUDY NOTES. Backend  /  Interview prep.</desc>
+  <defs>
+    <linearGradient id="panel">
+      <stop stop-color="#0C1326"/>
+      <stop offset="1" stop-color="#312632"/>
+    </linearGradient>
+    <pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r=".85" fill="#FFD194" opacity=".28"/>
+    </pattern>
+    <clipPath id="clip"><rect width="560" height="166" rx="16"/></clipPath>
+  </defs>
+  <style>
+    .orbit { transform-box: fill-box; transform-origin: center; animation: orbit 12s linear infinite; }
+    .signal { animation: flicker 3.8s ease-in-out infinite; }
+    @keyframes orbit { to { transform: rotate(360deg); } }
+    @keyframes flicker { 50% { opacity: .4; } }
+    @media (prefers-reduced-motion: reduce) { .orbit, .signal { animation: none; } }
+  </style>
+  <g clip-path="url(#clip)">
+    <rect width="560" height="166" fill="url(#panel)"/>
+    <rect x="376" width="184" height="166" fill="url(#dots)"/>
+    <path d="M389 141h151M389 26h151" fill="none" stroke="#614736"/>
+    <circle cx="36" cy="40" r="4" fill="#FFD194" class="signal"/>
+    <text x="49" y="45" fill="#FFD194" font-family="Consolas, Menlo, monospace" font-size="15" font-weight="700" letter-spacing="2">STUDY NOTES</text>
+    <text x="30" y="103" fill="#F4F6FF" font-family="Segoe UI, Arial, sans-serif" font-size="48" font-weight="700">bagu</text>
+    <text x="34" y="136" fill="#B8C7E5" font-family="Segoe UI, Arial, sans-serif" font-size="19">Backend  /  Interview prep</text>
+    <circle cx="465" cy="82" r="48" fill="#312632" stroke="#614736"/>
+    <circle class="orbit" cx="465" cy="82" r="41" fill="none" stroke="#FFD194" stroke-opacity=".75" stroke-dasharray="12 18 3 9 22 14"/>
+    <g transform="translate(465 80)" fill="none" stroke="#FFD194" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M0-13c-8-5-17-6-26-3v35c10-3 19-1 26 4 7-5 16-7 26-4v-35c-9-3-18-2-26 3v36"/><path d="M-18-5c5-1 9 0 12 2M6-3c4-2 8-3 12-2"/>
+    </g>
+  </g>
+  <rect x=".5" y=".5" width="559" height="165" rx="15.5" fill="none" stroke="#614736"/>
+</svg>

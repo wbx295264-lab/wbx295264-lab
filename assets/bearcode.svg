@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 166" width="560" height="166" role="img" aria-labelledby="title details">
+  <title id="title">BearCode</title>
+  <desc id="details">AGENT RUNTIME. Python  /  Web + CLI.</desc>
+  <defs>
+    <linearGradient id="panel">
+      <stop stop-color="#0C1326"/>
+      <stop offset="1" stop-color="#231E41"/>
+    </linearGradient>
+    <pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r=".85" fill="#C7ACFF" opacity=".28"/>
+    </pattern>
+    <clipPath id="clip"><rect width="560" height="166" rx="16"/></clipPath>
+  </defs>
+  <style>
+    .orbit { transform-box: fill-box; transform-origin: center; animation: orbit 12s linear infinite; }
+    .signal { animation: flicker 3.8s ease-in-out infinite; }
+    @keyframes orbit { to { transform: rotate(360deg); } }
+    @keyframes flicker { 50% { opacity: .4; } }
+    @media (prefers-reduced-motion: reduce) { .orbit, .signal { animation: none; } }
+  </style>
+  <g clip-path="url(#clip)">
+    <rect width="560" height="166" fill="url(#panel)"/>
+    <rect x="376" width="184" height="166" fill="url(#dots)"/>
+    <path d="M389 141h151M389 26h151" fill="none" stroke="#413365"/>
+    <circle cx="36" cy="40" r="4" fill="#C7ACFF" class="signal"/>
+    <text x="49" y="45" fill="#C7ACFF" font-family="Consolas, Menlo, monospace" font-size="15" font-weight="700" letter-spacing="2">AGENT RUNTIME</text>
+    <text x="30" y="103" fill="#F4F6FF" font-family="Segoe UI, Arial, sans-serif" font-size="48" font-weight="700">BearCode</text>
+    <text x="34" y="136" fill="#B8C7E5" font-family="Segoe UI, Arial, sans-serif" font-size="19">Python  /  Web + CLI</text>
+    <circle cx="465" cy="82" r="48" fill="#231E41" stroke="#413365"/>
+    <circle class="orbit" cx="465" cy="82" r="41" fill="none" stroke="#C7ACFF" stroke-opacity=".75" stroke-dasharray="12 18 3 9 22 14"/>
+    <g transform="translate(465 80)" fill="none" stroke="#C7ACFF" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="-26" y="-17" width="52" height="37" rx="7"/><path d="m-16-5 9 7-9 7m16 1h14"/>
+    </g>
+  </g>
+  <rect x=".5" y=".5" width="559" height="165" rx="15.5" fill="none" stroke="#413365"/>
+</svg>

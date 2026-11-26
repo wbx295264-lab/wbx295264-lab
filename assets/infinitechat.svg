@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 166" width="560" height="166" role="img" aria-labelledby="title details">
+  <title id="title">InfiniteChat</title>
+  <desc id="details">MESSAGING BACKEND. Java  /  Spring Boot.</desc>
+  <defs>
+    <linearGradient id="panel">
+      <stop stop-color="#0C1326"/>
+      <stop offset="1" stop-color="#132B32"/>
+    </linearGradient>
+    <pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r=".85" fill="#73E7CD" opacity=".28"/>
+    </pattern>
+    <clipPath id="clip"><rect width="560" height="166" rx="16"/></clipPath>
+  </defs>
+  <style>
+    .orbit { transform-box: fill-box; transform-origin: center; animation: orbit 12s linear infinite; }
+    .signal { animation: flicker 3.8s ease-in-out infinite; }
+    @keyframes orbit { to { transform: rotate(360deg); } }
+    @keyframes flicker { 50% { opacity: .4; } }
+    @media (prefers-reduced-motion: reduce) { .orbit, .signal { animation: none; } }
+  </style>
+  <g clip-path="url(#clip)">
+    <rect width="560" height="166" fill="url(#panel)"/>
+    <rect x="376" width="184" height="166" fill="url(#dots)"/>
+    <path d="M389 141h151M389 26h151" fill="none" stroke="#104542"/>
+    <circle cx="36" cy="40" r="4" fill="#73E7CD" class="signal"/>
+    <text x="49" y="45" fill="#73E7CD" font-family="Consolas, Menlo, monospace" font-size="15" font-weight="700" letter-spacing="2">MESSAGING BACKEND</text>
+    <text x="30" y="103" fill="#F4F6FF" font-family="Segoe UI, Arial, sans-serif" font-size="48" font-weight="700">InfiniteChat</text>
+    <text x="34" y="136" fill="#B8C7E5" font-family="Segoe UI, Arial, sans-serif" font-size="19">Java  /  Spring Boot</text>
+    <circle cx="465" cy="82" r="48" fill="#132B32" stroke="#104542"/>
+    <circle class="orbit" cx="465" cy="82" r="41" fill="none" stroke="#73E7CD" stroke-opacity=".75" stroke-dasharray="12 18 3 9 22 14"/>
+    <g transform="translate(465 80)" fill="none" stroke="#73E7CD" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-19-13h38a6 6 0 0 1 6 6v16a6 6 0 0 1-6 6H3l-13 10V15h-9a6 6 0 0 1-6-6V-7a6 6 0 0 1 6-6Z"/><path d="M-13-2h27M-13 6H7"/>
+    </g>
+  </g>
+  <rect x=".5" y=".5" width="559" height="165" rx="15.5" fill="none" stroke="#104542"/>
+</svg>
